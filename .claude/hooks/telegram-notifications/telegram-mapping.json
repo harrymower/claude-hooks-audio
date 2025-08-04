@@ -1,0 +1,41 @@
+{
+  "stop": {
+    "template": "✅ *Task Completed*\n\nClaude completed: [activity-summary] in *[project-name]*\n\n🕐 Time: [timestamp]",
+    "priority": "high",
+    "parse_mode": "Markdown"
+  },
+  "notification": {
+    "permission_required": {
+      "template": "⚠️ *Permission Required*\n\nClaude needs your permission in *[project-name]*:\n\n```\n[requested-action]\n```\n\n🕐 Time: [timestamp]",
+      "priority": "high",
+      "parse_mode": "Markdown"
+    },
+    "default": {
+      "template": "📢 *Claude Notification*\n\nNotification in *[project-name]*\n\n🕐 Time: [timestamp]",
+      "priority": "medium",
+      "parse_mode": "Markdown"
+    }
+  },
+  "pre_tool_use": {
+    "Bash": {
+      "template": "💻 *Executing Command*\n\nClaude is running a command in *[project-name]*\n\n🕐 Time: [timestamp]",
+      "priority": "medium",
+      "parse_mode": "Markdown"
+    },
+    "Write": {
+      "template": "📝 *Creating File*\n\nClaude is creating a file in *[project-name]*\n\n🕐 Time: [timestamp]",
+      "priority": "medium",
+      "parse_mode": "Markdown"
+    },
+    "Edit": {
+      "template": "✏️ *Editing File*\n\nClaude is editing a file in *[project-name]*\n\n🕐 Time: [timestamp]",
+      "priority": "medium",
+      "parse_mode": "Markdown"
+    },
+    "MultiEdit": {
+      "template": "📝 *Editing Multiple Files*\n\nClaude is editing files in *[project-name]*\n\n🕐 Time: [timestamp]",
+      "priority": "medium",
+      "parse_mode": "Markdown"
+    }
+  }
+}

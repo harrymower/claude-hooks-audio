@@ -11,6 +11,18 @@
           {
             "type": "command",
             "command": "npx tsx .claude/hooks/desktop-notifications/handler.ts"
+          },
+          {
+            "type": "command",
+            "command": "npx tsx .claude/hooks/discord-notifications/handler.ts"
+          },
+          {
+            "type": "command",
+            "command": "npx tsx .claude/hooks/email-notifications/handler.ts"
+          },
+          {
+            "type": "command",
+            "command": "npx tsx .claude/hooks/telegram-notifications/handler.ts"
           }
         ]
       }
@@ -37,12 +49,38 @@
           {
             "type": "command",
             "command": "npx tsx .claude/hooks/desktop-notifications/handler.ts"
+          },
+          {
+            "type": "command",
+            "command": "npx tsx .claude/hooks/discord-notifications/handler.ts"
+          },
+          {
+            "type": "command",
+            "command": "npx tsx .claude/hooks/email-notifications/handler.ts"
+          },
+          {
+            "type": "command",
+            "command": "npx tsx .claude/hooks/telegram-notifications/handler.ts"
           }
         ]
       }
     ]
   },
   "env": {
-    "VOICE_PACK": "alfred"
+    "VOICE_PACK": "alfred",
+    "DISCORD_ENABLED": "false",
+    "DISCORD_WEBHOOK_URL": "",
+    "DISCORD_USERNAME": "Claude Code",
+    "DISCORD_AVATAR_URL": "",
+    "EMAIL_ENABLED": "true",
+    "EMAIL_FROM": "",
+    "EMAIL_TO": "",
+    "EMAIL_SMTP_HOST": "smtp.gmail.com",
+    "EMAIL_SMTP_PORT": "587",
+    "EMAIL_SMTP_USER": "",
+    "EMAIL_SMTP_PASS": "",
+    "TELEGRAM_ENABLED": "true",
+    "TELEGRAM_BOT_TOKEN": "",
+    "TELEGRAM_CHAT_ID": ""
   }
 }

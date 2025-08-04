@@ -4,9 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This project implements a dual notification system for Claude Code hooks using TypeScript:
+This project implements a comprehensive notification system for Claude Code hooks using TypeScript:
 - **Audio Notifications**: Cross-platform audio playback for various Claude events
-- **Desktop Notifications**: Native OS notifications for important Claude events
+- **Desktop Notifications**: Native OS notifications for important Claude events  
+- **Discord Notifications**: Rich webhook embeds with mobile push notifications
+- **Email Notifications**: HTML formatted emails with SMTP delivery
+- **Telegram Notifications**: Instant bot messages with Markdown formatting
 
 ## Development Environment
 
@@ -45,9 +48,21 @@ npm test
 │   │   ├── handler.ts           # Voice notification handler
 │   │   ├── sound-mapping.json   # Event-to-sound mappings
 │   │   └── sounds/             # Audio files by voice pack
-│   └── desktop-notifications/
-│       ├── handler.ts                  # Desktop notification handler
-│       └── notification-mapping.json   # Event-to-message mappings
+│   ├── desktop-notifications/
+│   │   ├── handler.ts                  # Desktop notification handler
+│   │   └── notification-mapping.json   # Event-to-message mappings
+│   ├── discord-notifications/
+│   │   ├── handler.ts                  # Discord webhook handler
+│   │   ├── discord-mapping.json        # Discord embed templates
+│   │   └── README.md                   # Discord setup guide
+│   ├── email-notifications/
+│   │   ├── handler.ts                  # Email notification handler
+│   │   ├── email-mapping.json          # Email message templates
+│   │   └── README.md                   # Email setup guide
+│   └── telegram-notifications/
+│       ├── handler.ts                  # Telegram bot handler
+│       ├── telegram-mapping.json       # Telegram message templates
+│       └── README.md                   # Telegram setup guide
 └── dist/                 # Compiled JavaScript output
 ```
 
@@ -64,12 +79,27 @@ The project handles three main hook events:
 - **Voice Pack Support**: Easy switching between voice personalities (alfred, jarvis, etc.)
 - **Cross-Platform Support**: Works on Windows, macOS, and Linux
 - **Native OS Integration**: Uses system notification APIs for desktop alerts
-- **Fully Local**: No external services or internet connection required
+- **Remote Notifications**: Discord webhooks and email for away-from-computer alerts
+- **Rich Formatting**: Discord embeds and HTML emails with colors and styling
+- **Flexible Configuration**: Enable/disable each notification type independently
+- **Secure**: Sensitive credentials stored in .env file
 
 ## Configuration
 
 ### Environment Variables (in settings.json)
 - `VOICE_PACK`: Voice pack to use (default: "alfred")
+- `DISCORD_ENABLED`: Enable Discord notifications (default: "false")
+- `DISCORD_WEBHOOK_URL`: Discord webhook URL (stored in .env)
+- `DISCORD_USERNAME`: Webhook display name (default: "Claude Code")
+- `EMAIL_ENABLED`: Enable email notifications (default: "false")
+- `EMAIL_FROM`: Sender email address
+- `EMAIL_TO`: Recipient email address
+- `EMAIL_SMTP_HOST`: SMTP server (default: "smtp.gmail.com")
+- `EMAIL_SMTP_USER`: SMTP username (stored in .env)
+- `EMAIL_SMTP_PASS`: SMTP password (stored in .env)
+- `TELEGRAM_ENABLED`: Enable Telegram notifications (default: "false")
+- `TELEGRAM_BOT_TOKEN`: Telegram bot token (stored in .env)
+- `TELEGRAM_CHAT_ID`: Telegram chat ID (stored in .env)
 
 ### Adding New Sounds
 1. Add .wav files to `.claude/hooks/audio-notifications/sounds/[voice-pack]/`

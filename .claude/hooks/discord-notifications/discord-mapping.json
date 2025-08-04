@@ -1,0 +1,48 @@
+{
+  "stop": {
+    "title": "✅ Task Completed",
+    "description": "Claude completed: [activity-summary] in **[project-name]**",
+    "color": 3066993,
+    "priority": "high"
+  },
+  "notification": {
+    "permission_required": {
+      "title": "⚠️ Permission Required",
+      "description": "Claude needs permission in **[project-name]**:\n```\n[requested-action]\n```",
+      "color": 16776960,
+      "priority": "high"
+    },
+    "default": {
+      "title": "📢 Notification",
+      "description": "Claude notification in **[project-name]**",
+      "color": 3447003,
+      "priority": "medium"
+    }
+  },
+  "pre_tool_use": {
+    "Bash": {
+      "title": "💻 Executing Command",
+      "description": "Claude is running a command in **[project-name]**",
+      "color": 9807270,
+      "priority": "medium"
+    },
+    "Write": {
+      "title": "📝 Creating File",
+      "description": "Claude is creating a file in **[project-name]**",
+      "color": 3447003,
+      "priority": "medium"
+    },
+    "Edit": {
+      "title": "✏️ Editing File",
+      "description": "Claude is editing a file in **[project-name]**",
+      "color": 3447003,
+      "priority": "medium"
+    },
+    "MultiEdit": {
+      "title": "📝 Editing Multiple Files",
+      "description": "Claude is editing files in **[project-name]**",
+      "color": 3447003,
+      "priority": "medium"
+    }
+  }
+}
