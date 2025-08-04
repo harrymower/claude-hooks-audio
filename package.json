@@ -1,6 +1,6 @@
 {
   "name": "claude-hooks-notifications",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Unified notification system for Claude Code hooks",
   "type": "module",
   "scripts": {
