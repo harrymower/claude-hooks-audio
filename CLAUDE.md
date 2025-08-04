@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This project implements a dual notification system for Claude Code hooks using TypeScript:
-- **Voice Notifications**: Cross-platform audio playback for various Claude events
+- **Audio Notifications**: Cross-platform audio playback for various Claude events
 - **Desktop Notifications**: Native OS notifications for important Claude events
 
 ## Development Environment
@@ -41,7 +41,7 @@ npm test
 ├── settings.json         # Hook configurations
 ├── settings.local.json   # Local permissions
 ├── hooks/
-│   ├── voice-notifications/
+│   ├── audio-notifications/
 │   │   ├── handler.ts           # Voice notification handler
 │   │   ├── sound-mapping.json   # Event-to-sound mappings
 │   │   └── sounds/             # Audio files by voice pack
@@ -72,7 +72,7 @@ The project handles three main hook events:
 - `VOICE_PACK`: Voice pack to use (default: "alfred")
 
 ### Adding New Sounds
-1. Add .wav files to `.claude/hooks/voice-notifications/sounds/[voice-pack]/`
+1. Add .wav files to `.claude/hooks/audio-notifications/sounds/[voice-pack]/`
 2. Update `sound-mapping.json` with new mappings
 3. Restart Claude Code to apply changes
 

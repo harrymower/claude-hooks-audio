@@ -107,7 +107,7 @@ async function generateSilentWav(filename: string, durationMs: number = 200): Pr
 
 async function main() {
   const voicePack = process.env.VOICE_PACK || 'alfred';
-  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sounds', voicePack);
+  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sounds', voicePack);
   
   console.log(`Downloading sounds for voice pack: ${voicePack}`);
   console.log(`Target directory: ${soundsDir}\n`);

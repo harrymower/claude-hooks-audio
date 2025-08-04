@@ -6,7 +6,7 @@ A TypeScript-based notification system for Claude Code that provides real-time v
 
 ## Features
 
-- 🔊 **Voice Notifications**: Cross-platform audio alerts for Claude Code events
+- 🔊 **Audio Notifications**: Cross-platform sound alerts for Claude Code events
 - 🖥️ **Desktop Notifications**: Native OS notifications (Windows, macOS, Linux)
 - 🎯 **Context-Aware**: Different notifications based on file types and operations
 - 🎭 **Voice Packs**: Support for multiple voice personalities (Alfred, Jarvis, etc.)
@@ -21,8 +21,8 @@ A TypeScript-based notification system for Claude Code that provides real-time v
    ```
 
 2. **Add audio files (optional):**
-   - Place `.wav` files in `.claude/hooks/voice-notifications/sounds/alfred/`
-   - See the [audio files README](.claude/hooks/voice-notifications/sounds/alfred/README.md) for required files
+   - Place `.wav` files in `.claude/hooks/audio-notifications/sounds/alfred/`
+   - See the [audio files README](.claude/hooks/audio-notifications/sounds/alfred/README.md) for required files
    - System works without audio files (will log "Sound file not found")
 
 3. **Use Claude Code normally** - notifications will trigger automatically!
@@ -58,7 +58,7 @@ Or test individual components:
 echo {"hook":"stop","event":"stop"} | tsx .claude/hooks/desktop-notifications/handler.ts
 
 # Test voice notification
-echo {"hook":"stop","event":"stop"} | tsx .claude/hooks/voice-notifications/handler.ts
+echo {"hook":"stop","event":"stop"} | tsx .claude/hooks/audio-notifications/handler.ts
 ```
 
 ## Customization
@@ -80,7 +80,7 @@ Edit notification behavior in `.claude/hooks/desktop-notifications/notification-
 - `messages`: Array of random messages to display
 
 ### Add New Sounds
-1. Add entries to `.claude/hooks/voice-notifications/sound-mapping.json`
+1. Add entries to `.claude/hooks/audio-notifications/sound-mapping.json`
 2. Place corresponding `.wav` files in the sounds directory
 3. Restart Claude Code
 

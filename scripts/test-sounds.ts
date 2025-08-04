@@ -7,8 +7,8 @@ const __dirname = path.dirname(__filename);
 
 function checkSoundSetup() {
   const voicePack = process.env.VOICE_PACK || 'alfred';
-  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sounds', voicePack);
-  const mappingPath = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sound-mapping.json');
+  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sounds', voicePack);
+  const mappingPath = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sound-mapping.json');
   
   console.log(`Checking sound setup for voice pack: ${voicePack}`);
   console.log(`Sound directory: ${soundsDir}\n`);

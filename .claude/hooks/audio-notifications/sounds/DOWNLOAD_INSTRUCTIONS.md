@@ -40,7 +40,7 @@ To set up notification sounds for your Claude hooks, follow these steps:
 1. Visit the sources above
 2. Search using the provided keywords
 3. Download sounds in WAV format
-4. Place them in: .claude/hooks/voice-notifications/sounds/[voice-pack]/
+4. Place them in: .claude/hooks/audio-notifications/sounds/[voice-pack]/
 5. Use the exact filenames listed above
 
 ## Voice Packs:

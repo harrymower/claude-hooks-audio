@@ -63,7 +63,7 @@ async function runTest(event: any, description: string): Promise<void> {
     console.log(`\nTesting: ${description}`);
     console.log(`Event: ${JSON.stringify(event, null, 2)}`);
     
-    const handlerPath = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'handler.ts');
+    const handlerPath = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'handler.ts');
     
     // Run the handler with the event
     const child = spawn('npx', ['tsx', handlerPath], {
@@ -104,7 +104,7 @@ async function runTest(event: any, description: string): Promise<void> {
 async function testDirectPlayback() {
   console.log('\n=== Testing Direct Audio Playback ===');
   
-  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sounds', 'alfred');
+  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sounds', 'alfred');
   const testSound = path.join(soundsDir, 'success.wav');
   
   console.log(`\nTesting direct playback of: ${testSound}`);

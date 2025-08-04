@@ -112,7 +112,7 @@ function generateClickWav(filename: string): void {
 
 async function generateSounds() {
   const voicePack = process.env.VOICE_PACK || 'alfred';
-  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sounds', voicePack);
+  const soundsDir = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sounds', voicePack);
   
   console.log(`Generating notification sounds for voice pack: ${voicePack}`);
   console.log(`Target directory: ${soundsDir}\n`);

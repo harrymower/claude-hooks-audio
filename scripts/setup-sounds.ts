@@ -47,7 +47,7 @@ const requiredSounds: SoundSetup[] = [
 
 function setupSoundDirectories() {
   const voicePacks = ['alfred', 'jarvis', 'friday', 'edith'];
-  const baseDir = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sounds');
+  const baseDir = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sounds');
   
   // Create directories for each voice pack
   voicePacks.forEach(pack => {
@@ -81,7 +81,7 @@ ${requiredSounds.map(sound => `
 1. Visit the sources above
 2. Search using the provided keywords
 3. Download sounds in WAV format
-4. Place them in: .claude/hooks/voice-notifications/sounds/[voice-pack]/
+4. Place them in: .claude/hooks/audio-notifications/sounds/[voice-pack]/
 5. Use the exact filenames listed above
 
 ## Voice Packs:
@@ -102,7 +102,7 @@ You can customize sounds for each voice pack or use the same sounds across all p
 }
 
 function updateSoundMapping() {
-  const mappingPath = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sound-mapping.json');
+  const mappingPath = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sound-mapping.json');
   
   const soundMapping = {
     "stop": {

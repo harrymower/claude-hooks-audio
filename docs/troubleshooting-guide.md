@@ -21,7 +21,7 @@ On Windows, the audio playback might fail silently if:
 **Solution**: Test audio playback directly:
 ```bash
 # Test if PowerShell can play the audio
-powershell -c "(New-Object Media.SoundPlayer '.claude/hooks/voice-notifications/sounds/alfred/success.wav').PlaySync()"
+powershell -c "(New-Object Media.SoundPlayer '.claude/hooks/audio-notifications/sounds/alfred/success.wav').PlaySync()"
 ```
 
 #### 3. Desktop Notification Permissions
@@ -44,7 +44,7 @@ The hooks receive input via stdin in JSON format. The current handlers expect:
 
 Test voice notifications:
 ```bash
-echo {"hook_event_name":"Stop","session_id":"test","cwd":"."} | npx tsx .claude/hooks/voice-notifications/handler.ts
+echo {"hook_event_name":"Stop","session_id":"test","cwd":"."} | npx tsx .claude/hooks/audio-notifications/handler.ts
 ```
 
 Test desktop notifications:

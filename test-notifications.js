@@ -59,7 +59,7 @@ tests.forEach((test, index) => {
     try {
       if (test.handlers.includes('voice')) {
         console.log('  🔊 Sending voice notification...');
-        execSync(`echo '${json}' | tsx .claude/hooks/voice-notifications/handler.ts`, { 
+        execSync(`echo '${json}' | tsx .claude/hooks/audio-notifications/handler.ts`, { 
           stdio: ['pipe', 'inherit', 'inherit'] 
         });
       }
@@ -84,6 +84,6 @@ setTimeout(() => {
   console.log('\n✨ All tests completed!');
   console.log('\n💡 Tips:');
   console.log('- Desktop notifications should have appeared in your system notification area');
-  console.log('- Add .wav files to .claude/hooks/voice-notifications/sounds/alfred/ for audio');
+  console.log('- Add .wav files to .claude/hooks/audio-notifications/sounds/alfred/ for audio');
   console.log('- Check your OS notification settings if you didn\'t see notifications');
 }, delay + 1000);

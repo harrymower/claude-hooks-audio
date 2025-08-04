@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx tsx .claude/hooks/voice-notifications/handler.ts"
+            "command": "npx tsx .claude/hooks/audio-notifications/handler.ts"
           },
           {
             "type": "command",
@@ -32,7 +32,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx tsx .claude/hooks/voice-notifications/handler.ts"
+            "command": "npx tsx .claude/hooks/audio-notifications/handler.ts"
           },
           {
             "type": "command",

@@ -23,13 +23,13 @@ Test the handlers directly by simulating hook events:
 
 ```bash
 # Test voice notification - task complete
-echo '{"hook":"stop","event":"stop"}' | tsx .claude/hooks/voice-notifications/handler.ts
+echo '{"hook":"stop","event":"stop"}' | tsx .claude/hooks/audio-notifications/handler.ts
 
 # Test push notification - task complete
 echo '{"hook":"stop","event":"stop"}' | tsx .claude/hooks/push-notifications/handler.ts
 
 # Test reading a TypeScript file
-echo '{"hook":"pre_tool_use","tool":"Read","params":{"file_path":"test.ts"}}' | tsx .claude/hooks/voice-notifications/handler.ts
+echo '{"hook":"pre_tool_use","tool":"Read","params":{"file_path":"test.ts"}}' | tsx .claude/hooks/audio-notifications/handler.ts
 
 # Test permission required
 echo '{"hook":"notification","notification":{"type":"permission_required","message":"Need permission to edit"}}' | tsx .claude/hooks/push-notifications/handler.ts
@@ -73,7 +73,7 @@ tests.forEach(test => {
   
   try {
     // Test voice
-    execSync(`echo '${json}' | tsx .claude/hooks/voice-notifications/handler.ts`, { stdio: 'inherit' });
+    execSync(`echo '${json}' | tsx .claude/hooks/audio-notifications/handler.ts`, { stdio: 'inherit' });
     
     // Test push (only for important events)
     if (test.event.hook === "stop" || test.event.hook === "notification") {
@@ -147,7 +147,7 @@ For quick testing without real audio files, create silent .wav files:
 # Linux: apt-get install sox
 
 # Create a 1-second silent wav file
-sox -n -r 44100 -c 2 .claude/hooks/voice-notifications/sounds/alfred/task_complete_1.wav trim 0.0 1.0
+sox -n -r 44100 -c 2 .claude/hooks/audio-notifications/sounds/alfred/task_complete_1.wav trim 0.0 1.0
 ```
 
 Or use online text-to-speech services to generate voice files.

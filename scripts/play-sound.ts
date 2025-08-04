@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function playSound(soundFile: string) {
-  const soundPath = path.join(__dirname, '..', '.claude', 'hooks', 'voice-notifications', 'sounds', 'alfred', soundFile);
+  const soundPath = path.join(__dirname, '..', '.claude', 'hooks', 'audio-notifications', 'sounds', 'alfred', soundFile);
   
   console.log(`Playing sound: ${soundPath}`);
   
