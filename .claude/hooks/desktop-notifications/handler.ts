@@ -126,6 +126,7 @@ class DesktopNotificationHandler {
       message: message,
       sound: config.sound !== false, // Default to true
       timeout: config.timeout || 10, // Default 10 seconds
+      appName: 'Claude Hooks', // Override the app name to avoid "SnoreToast"
     };
 
     // Add icon if it exists
@@ -135,8 +136,11 @@ class DesktopNotificationHandler {
 
     // Windows-specific options
     if (process.platform === 'win32') {
-      // Use our registered app ID
-      notificationOptions.appID = 'com.claude.hooks';
+      // Set a title to avoid "SnoreToast" default
+      // Not using appID to avoid duplicate notifications
+      if (!notificationOptions.title || notificationOptions.title === '') {
+        notificationOptions.title = 'Claude Hooks';
+      }
     }
 
     // macOS-specific options
