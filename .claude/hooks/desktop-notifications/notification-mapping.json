@@ -1,0 +1,124 @@
+{
+  "stop": {
+    "title": "Task Complete ✅",
+    "messages": [
+      "I've finished working on your request!",
+      "Your task has been completed successfully.",
+      "All done! Check the results above.",
+      "Task finished. Ready for your next request!",
+      "Work complete. Let me know if you need anything else!"
+    ],
+    "sound": true,
+    "timeout": 10
+  },
+  "notification": {
+    "permission_required": {
+      "title": "Action Required ⚠️",
+      "messages": [
+        "I need your permission to proceed with this action.",
+        "Waiting for your approval to continue.",
+        "Please review and approve the pending operation.",
+        "Your input is needed to move forward.",
+        "I'm ready to proceed when you approve."
+      ],
+      "sound": true,
+      "timeout": 30
+    },
+    "default": {
+      "title": "Claude Code - Notification",
+      "messages": [
+        "Claude has a notification for you",
+        "Check Claude Code for updates"
+      ],
+      "sound": true,
+      "timeout": 10
+    }
+  },
+  "pre_tool_use": {
+    "Read": {
+      "extensions": {
+        ".py": {
+          "title": "Reading Python File",
+          "messages": ["Analyzing Python code...", "Reading Python script..."],
+          "sound": false
+        },
+        ".ts": {
+          "title": "Reading TypeScript File",
+          "messages": ["Analyzing TypeScript code...", "Reading TypeScript file..."],
+          "sound": false
+        },
+        ".js": {
+          "title": "Reading JavaScript File",
+          "messages": ["Analyzing JavaScript code...", "Reading JS file..."],
+          "sound": false
+        },
+        ".md": {
+          "title": "Reading Documentation",
+          "messages": ["Reading markdown documentation...", "Analyzing docs..."],
+          "sound": false
+        }
+      },
+      "files": {
+        "readme.md": {
+          "title": "Reading README",
+          "messages": ["Checking project documentation...", "Reading README file..."],
+          "sound": false
+        },
+        "package.json": {
+          "title": "Reading Package Config",
+          "messages": ["Checking dependencies...", "Reading package configuration..."],
+          "sound": false
+        }
+      },
+      "default": {
+        "title": "Reading File",
+        "messages": ["Reading file contents...", "Accessing file..."],
+        "sound": false
+      }
+    },
+    "Edit": {
+      "extensions": {
+        ".py": {
+          "title": "Editing Python Code",
+          "messages": ["Modifying Python script...", "Updating Python code..."],
+          "sound": false
+        },
+        ".ts": {
+          "title": "Editing TypeScript Code",
+          "messages": ["Modifying TypeScript file...", "Updating TypeScript..."],
+          "sound": false
+        },
+        ".js": {
+          "title": "Editing JavaScript Code",
+          "messages": ["Modifying JavaScript file...", "Updating JS code..."],
+          "sound": false
+        }
+      },
+      "default": {
+        "title": "Editing File",
+        "messages": ["Making changes to file...", "Updating file contents..."],
+        "sound": false
+      }
+    },
+    "Write": {
+      "title": "Creating New File",
+      "messages": ["Creating new file...", "Writing file contents..."],
+      "sound": false
+    },
+    "Bash": {
+      "title": "Running Command",
+      "messages": ["Executing bash command...", "Running shell command..."],
+      "sound": false
+    },
+    "Grep": {
+      "title": "Searching Code",
+      "messages": ["Searching through codebase...", "Looking for matches..."],
+      "sound": false
+    },
+    "TodoWrite": {
+      "title": "Updating Tasks",
+      "messages": ["Updating todo list...", "Managing tasks..."],
+      "sound": false
+    }
+  }
+}

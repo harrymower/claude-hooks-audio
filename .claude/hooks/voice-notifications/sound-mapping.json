@@ -1,0 +1,32 @@
+{
+  "stop": ["success.wav"],
+  "pre_tool_use": {
+    "Read": {
+      "default": ["info.wav"]
+    },
+    "Edit": {
+      "default": ["tool-use.wav"]
+    },
+    "Write": {
+      "default": ["tool-use.wav"]
+    },
+    "Bash": {
+      "default": ["tool-use.wav"]
+    },
+    "MultiEdit": {
+      "default": ["tool-use.wav"]
+    },
+    "Grep": {
+      "default": ["info.wav"]
+    },
+    "default": {
+      "default": ["tool-use.wav"]
+    }
+  },
+  "notification": {
+    "permission_required": ["alert.wav"],
+    "default": ["alert.wav"],
+    "error": ["error.wav"],
+    "info": ["info.wav"]
+  }
+}

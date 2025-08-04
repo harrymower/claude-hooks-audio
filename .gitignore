@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude settings (contains local settings)
+.claude/settings.local.json
+
+# Activity logs
+.claude/hooks/activity-log.json
+
+# Build output
+dist/
+*.js.map
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Product screenshots (development only)
+.product/screenshot*.jpg
+.product/screenshot*.png

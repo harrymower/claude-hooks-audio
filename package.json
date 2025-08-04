@@ -1,0 +1,21 @@
+{
+  "name": "claude-hooks-notifications",
+  "version": "1.0.0",
+  "description": "Voice and desktop notifications for Claude Code hooks",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rimraf .claude/dist",
+    "test": "node test-notifications.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1",
+    "tsx": "^4.7.0"
+  }
+}
