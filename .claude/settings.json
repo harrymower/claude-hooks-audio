@@ -6,23 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx tsx .claude/hooks/audio-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/desktop-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/discord-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/email-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/telegram-notifications/handler.ts"
+            "command": "npx tsx .claude/hooks/notifications/handler.ts"
           }
         ]
       }
@@ -44,23 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npx tsx .claude/hooks/audio-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/desktop-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/discord-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/email-notifications/handler.ts"
-          },
-          {
-            "type": "command",
-            "command": "npx tsx .claude/hooks/telegram-notifications/handler.ts"
+            "command": "npx tsx .claude/hooks/notifications/handler.ts"
           }
         ]
       }

@@ -1,0 +1,191 @@
+{
+  "audio": {
+    "enabled": true,
+    "voicePack": "alfred",
+    "soundMapping": {
+      "stop": ["success.wav"],
+      "pre_tool_use": {
+        "read": {
+          "default": ["info.wav"]
+        },
+        "edit": {
+          "default": ["tool-use.wav"]
+        },
+        "write": {
+          "default": ["tool-use.wav"]
+        },
+        "bash": {
+          "default": ["tool-use.wav"]
+        },
+        "multiedit": {
+          "default": ["tool-use.wav"]
+        },
+        "grep": {
+          "default": ["info.wav"]
+        }
+      },
+      "notification": {
+        "permission_required": ["alert.wav"],
+        "default": ["alert.wav"]
+      }
+    }
+  },
+  "desktop": {
+    "enabled": true,
+    "notificationMapping": {
+      "stop": {
+        "title": "Task Complete ✅",
+        "message": "I've finished working on your request!",
+        "sound": true
+      },
+      "notification": {
+        "permission_required": {
+          "title": "Action Required ⚠️",
+          "message": "I need your permission to proceed with this action.",
+          "sound": true
+        },
+        "default": {
+          "title": "Claude Code - Notification",
+          "message": "Claude has a notification for you",
+          "sound": true
+        }
+      },
+      "pre_tool_use": {
+        "read": {
+          "title": "Reading File",
+          "message": "Reading file contents...",
+          "sound": false
+        },
+        "edit": {
+          "title": "Editing File",
+          "message": "Making changes to file...",
+          "sound": false
+        },
+        "write": {
+          "title": "Creating New File",
+          "message": "Creating new file...",
+          "sound": false
+        },
+        "bash": {
+          "title": "Running Command",
+          "message": "Executing bash command...",
+          "sound": false
+        }
+      }
+    }
+  },
+  "discord": {
+    "enabled": false,
+    "webhookUrl": "",
+    "username": "Claude Code",
+    "avatarUrl": "",
+    "discordMapping": {
+      "stop": {
+        "title": "✅ Task Completed",
+        "description": "Claude has finished the task",
+        "color": 3066993,
+        "priority": "high"
+      },
+      "notification": {
+        "permission_required": {
+          "title": "⚠️ Permission Required",
+          "description": "Claude needs your permission to proceed",
+          "color": 16776960,
+          "priority": "high"
+        },
+        "default": {
+          "title": "📢 Notification",
+          "description": "Claude has a notification",
+          "color": 3447003,
+          "priority": "medium"
+        }
+      },
+      "pre_tool_use": {
+        "bash": {
+          "title": "💻 Executing Command",
+          "description": "Claude is running a command",
+          "color": 9807270,
+          "priority": "medium"
+        },
+        "write": {
+          "title": "📝 Creating File",
+          "description": "Claude is creating a file",
+          "color": 3447003,
+          "priority": "medium"
+        },
+        "edit": {
+          "title": "✏️ Editing File",
+          "description": "Claude is editing a file",
+          "color": 3447003,
+          "priority": "medium"
+        }
+      }
+    }
+  },
+  "email": {
+    "enabled": true,
+    "from": "harrymower@gmail.com",
+    "to": "harrymower@gmail.com",
+    "smtpHost": "smtp.gmail.com",
+    "smtpPort": 587,
+    "smtpUser": "",
+    "smtpPass": "",
+    "emailMapping": {
+      "stop": {
+        "subject": "Claude Code - Task Completed ✅",
+        "bodyHtml": "<h2>Task Completed</h2><p>Claude has finished working on your request.</p>",
+        "priority": "normal"
+      },
+      "notification": {
+        "permission_required": {
+          "subject": "Claude Code - Permission Required ⚠️",
+          "bodyHtml": "<h2>Permission Required</h2><p>Claude needs your permission to proceed:</p><blockquote>{message}</blockquote>",
+          "priority": "high"
+        },
+        "default": {
+          "subject": "Claude Code - Notification",
+          "bodyHtml": "<h2>Notification</h2><p>Claude has a notification for you.</p>",
+          "priority": "normal"
+        }
+      },
+      "pre_tool_use": {
+        "bash": {
+          "subject": "Claude Code - Running Command",
+          "bodyHtml": "<h2>Command Execution</h2><p>Claude is executing a bash command.</p>",
+          "priority": "low"
+        }
+      }
+    }
+  },
+  "telegram": {
+    "enabled": true,
+    "botToken": "",
+    "chatId": "",
+    "telegramMapping": {
+      "stop": {
+        "message": "✅ *Task Completed*\\n\\nClaude has finished working on your request.",
+        "priority": "high",
+        "parseMode": "Markdown"
+      },
+      "notification": {
+        "permission_required": {
+          "message": "⚠️ *Permission Required*\\n\\nClaude needs your permission to proceed:\\n```\\n{message}\\n```",
+          "priority": "high",
+          "parseMode": "Markdown"
+        },
+        "default": {
+          "message": "📢 *Notification*\\n\\nClaude has a notification for you.",
+          "priority": "medium",
+          "parseMode": "Markdown"
+        }
+      },
+      "pre_tool_use": {
+        "bash": {
+          "message": "💻 *Running Command*\\n\\nClaude is executing a command.",
+          "priority": "low",
+          "parseMode": "Markdown"
+        }
+      }
+    }
+  }
+}

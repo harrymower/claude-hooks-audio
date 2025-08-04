@@ -1,7 +1,7 @@
 {
   "name": "claude-hooks-notifications",
   "version": "1.0.0-beta.1",
-  "description": "Voice and desktop notifications for Claude Code hooks",
+  "description": "Unified notification system for Claude Code hooks",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
+    "@types/node-notifier": "^8.0.5",
     "@types/nodemailer": "^6.4.17",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
